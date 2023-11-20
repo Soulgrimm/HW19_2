@@ -1,0 +1,52 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Молоко",
+      "description": "Молочный продукт из коровы",
+      "image": "",
+      "category": 1,
+      "purchase_price": 123,
+      "date_of_creation": "2023-11-20T19:27:05.919Z",
+      "date_of_last_mod": "2023-11-20T19:27:05.919Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Сыр",
+      "description": "Тоже молоко, только с закваской",
+      "image": "",
+      "category": 1,
+      "purchase_price": 200,
+      "date_of_creation": "2023-11-20T19:30:51.554Z",
+      "date_of_last_mod": "2023-11-20T19:30:51.554Z"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Молочные продукты",
+      "description": "Из коровы"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Хлебобулочные изделия",
+      "description": "Из пшеницы"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Соки",
+      "description": "Свежевыжатые соки"
+    }
+  }
+]
