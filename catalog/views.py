@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
-from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView, TemplateView
 from catalog.models import Product, Blog
 from pytils.translit import slugify
 
@@ -73,5 +73,9 @@ class BlogDeleteView(DeleteView):
     success_url = reverse_lazy('catalog:list')
 
 
-def contacts(request):
-    return render(request, 'catalog/contacts.html')
+class ContactsPageView(TemplateView):
+    template_name = 'catalog/contacts.html'
+
+
+# def contacts(request):
+#     return render(request, 'catalog/contacts.html')
