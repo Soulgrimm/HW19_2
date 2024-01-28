@@ -1,52 +1,733 @@
 [
   {
-    "model": "catalog.product",
+    "model": "admin.logentry",
     "pk": 1,
     "fields": {
-      "name": "Молоко",
-      "description": "Молочный продукт из коровы",
-      "image": "",
-      "category": 1,
-      "purchase_price": 123,
-      "date_of_creation": "2023-11-20T19:27:05.919Z",
-      "date_of_last_mod": "2023-11-20T19:27:05.919Z"
+      "action_time": "2023-11-20T19:26:32.174Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Молочные продукты, Из коровы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
     }
   },
   {
-    "model": "catalog.product",
+    "model": "admin.logentry",
     "pk": 2,
     "fields": {
-      "name": "Сыр",
-      "description": "Тоже молоко, только с закваской",
-      "image": "",
-      "category": 1,
-      "purchase_price": 200,
-      "date_of_creation": "2023-11-20T19:30:51.554Z",
-      "date_of_last_mod": "2023-11-20T19:30:51.554Z"
+      "action_time": "2023-11-20T19:27:06.013Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Молоко, Молочный продукт из коровы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
     }
   },
   {
-    "model": "catalog.category",
-    "pk": 1,
-    "fields": {
-      "name": "Молочные продукты",
-      "description": "Из коровы"
-    }
-  },
-  {
-    "model": "catalog.category",
-    "pk": 2,
-    "fields": {
-      "name": "Хлебобулочные изделия",
-      "description": "Из пшеницы"
-    }
-  },
-  {
-    "model": "catalog.category",
+    "model": "admin.logentry",
     "pk": 3,
     "fields": {
-      "name": "Соки",
-      "description": "Свежевыжатые соки"
+      "action_time": "2023-11-20T19:30:51.556Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Сыр, Тоже молоко, только с закваской",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-11-20T19:31:31.261Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Хлебобулочные изделия, Из пшеницы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-11-29T19:15:28.424Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Огурцы, Плоды однолетнего травянистого растения семейства Тыквенные. Относятся к овощным культурам.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-11-29T19:16:11.570Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Стиральный порошок, порошкообразное моющее средство, предназначенное для стирки белья вручную или в стиральных машинах.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-11-29T19:16:59.211Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Сидр, Слабоалкогольный напиток, получаемый посредством брожения яблочного, реже грушевого или айвового сока с помощью добавления культивированных дрожжей или натуральным способом.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Категория",
+      "content_type": 7,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Категория",
+      "content_type": 7,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Категория",
+      "content_type": 7,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Категория",
+      "content_type": 7,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Продукт",
+      "content_type": 8,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Продукт",
+      "content_type": 8,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Продукт",
+      "content_type": 8,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Продукт",
+      "content_type": 8,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add блог",
+      "content_type": 9,
+      "codename": "add_blog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change блог",
+      "content_type": 9,
+      "codename": "change_blog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete блог",
+      "content_type": 9,
+      "codename": "delete_blog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view блог",
+      "content_type": 9,
+      "codename": "view_blog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add Версия",
+      "content_type": 10,
+      "codename": "add_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change Версия",
+      "content_type": 10,
+      "codename": "change_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete Версия",
+      "content_type": 10,
+      "codename": "delete_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view Версия",
+      "content_type": 10,
+      "codename": "view_version"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$VrbVRXcp39eDrOUImZ0qED$qebRwN5qhc8UfV9/ejmRR5juM4rtvWBo21CvBlDVFrY=",
+      "last_login": "2023-11-20T19:15:18.481Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-11-20T19:14:43.995Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$uUJXOrol7svr0zyacgG4iz$Z2B9VtVk83mEd2vl7Pb1JcO0LeIuFhja4jUc4fpR6w4=",
+      "last_login": "2024-01-08T00:44:27.956Z",
+      "is_superuser": true,
+      "username": "pavel",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-08T00:44:16.895Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "catalog",
+      "model": "category"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "catalog",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "catalog",
+      "model": "blog"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "catalog",
+      "model": "version"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ayfr9s04zoiz02m6moqtrqo8k8l10mml",
+    "fields": {
+      "session_data": ".eJxVjDEOwjAMRe-SGUV2UrUOIztnqBw7IQWUSk07Ie4OlTrA-t97_2VG3tYybi0t46TmbNCcfrfI8kh1B3rneputzHVdpmh3xR602eus6Xk53L-Dwq18a09RnTqKTpiwh06RlXwfJIQhxOQTiwd0PQp4GDpHHnPG7GAA6YjM-wPVnTcE:1r59jq:b3nn72KeiOOatBBra-OjWmRT5MJBL_2Se15BeXojA6s",
+      "expire_date": "2023-12-04T19:15:18.507Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "s169n3f2no9b7gdy8hfy3yxa0l4qa5vm",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSFAebp07zeQgRmkaiAp7cr479qkC93ec859sQjbWuM2aIkzsjNT7PS7JcgPajvAO7Rb57m3dZkT3xV-0MGvHel5Ody_gwqjfmvjLAppvJm0AC-9kZMkcEWKrAGyxhCK8EVJNTmDJQUXnLU-KFKFMgn2_gC0YTch:1rMdki:Ae3i5rcdwZd4px3UrzjV_iAcwtq3m-sLMJhkPDxRZac",
+      "expire_date": "2024-01-22T00:44:28.059Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Огурцы",
+      "description": "Плоды однолетнего травянистого растения семейства Тыквенные. Относятся к овощным культурам.",
+      "image": "",
+      "category": 18,
+      "purchase_price": 156,
+      "date_of_creation": "2023-11-29T19:15:27.730Z",
+      "date_of_last_mod": "2024-01-10T20:50:40.905Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Стиральный порошок",
+      "description": "порошкообразное моющее средство, предназначенное для стирки белья вручную или в стиральных машинах.",
+      "image": "",
+      "category": 19,
+      "purchase_price": 200,
+      "date_of_creation": "2023-11-29T19:16:11.568Z",
+      "date_of_last_mod": "2023-11-29T19:16:11.568Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Сидр",
+      "description": "Слабоалкогольный напиток, получаемый посредством брожения яблочного, реже грушевого или айвового сока с помощью добавления культивированных дрожжей или натуральным способом.",
+      "image": "",
+      "category": 17,
+      "purchase_price": 120,
+      "date_of_creation": "2023-11-29T19:16:59.209Z",
+      "date_of_last_mod": "2023-11-29T19:16:59.209Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+      "name": "Зубная паста",
+      "description": "Средство личной гигиены. Для чистки зубов",
+      "image": "",
+      "category": 19,
+      "purchase_price": 120,
+      "date_of_creation": "2024-01-10T20:43:58.107Z",
+      "date_of_last_mod": "2024-01-14T18:34:20.383Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 12,
+    "fields": {
+      "name": "123",
+      "description": "123",
+      "image": "",
+      "category": 17,
+      "purchase_price": 123,
+      "date_of_creation": "2024-01-14T17:59:22.635Z",
+      "date_of_last_mod": "2024-01-14T18:34:50.629Z"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 17,
+    "fields": {
+      "name": "Алкоголь",
+      "description": "Спиртные напитки"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 18,
+    "fields": {
+      "name": "Овощи и фрукты",
+      "description": "Свежие овощи и фрукты"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 19,
+    "fields": {
+      "name": "Хозтовары",
+      "description": "Товары для дома, уборки и гигиены"
+    }
+  },
+  {
+    "model": "catalog.blog",
+    "pk": 22,
+    "fields": {
+      "title": "Test",
+      "slug": "test",
+      "content": "Test",
+      "image": "",
+      "date_of_creation": "2024-01-08T00:13:06.022Z",
+      "publication_sign": false,
+      "views_count": 3
+    }
+  },
+  {
+    "model": "catalog.blog",
+    "pk": 23,
+    "fields": {
+      "title": "123",
+      "slug": "123",
+      "content": "12345",
+      "image": "",
+      "date_of_creation": "2024-01-08T00:14:34.521Z",
+      "publication_sign": true,
+      "views_count": 7
+    }
+  },
+  {
+    "model": "catalog.blog",
+    "pk": 26,
+    "fields": {
+      "title": "7778",
+      "slug": "7778",
+      "content": "777",
+      "image": "",
+      "date_of_creation": "2024-01-08T00:24:10.820Z",
+      "publication_sign": true,
+      "views_count": 1
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 9,
+    "fields": {
+      "product": 12,
+      "version_number": 1,
+      "version_name": "1",
+      "sign_version": false
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 10,
+    "fields": {
+      "product": 12,
+      "version_number": 2,
+      "version_name": "2",
+      "sign_version": true
     }
   }
 ]
