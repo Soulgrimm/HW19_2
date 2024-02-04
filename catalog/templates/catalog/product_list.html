@@ -28,8 +28,10 @@
                     <div class="btn-group">
                             <a href="{% url 'catalog:view_product' object.pk %}"
                                class="btn btn-sm btn-outline-secondary">Просмотр</a>
+                            {% if request.user == object.is_author or user.is_staff %}
                             <a href="{% url 'catalog:update_product' object.pk %}" type="button"
                                class="btn btn-sm btn-outline-secondary">Изменить</a>
+                            {% endif %}
                             <a href="{% url 'catalog:delete_product' object.pk %}" type="button"
                                class="btn btn-sm btn-outline-danger">Удалить</a>
                     </div>

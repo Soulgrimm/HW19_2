@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.forms import inlineformset_factory
 from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
@@ -8,16 +9,30 @@ from catalog.models import Product, Blog, Version
 from pytils.translit import slugify
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
+    # permission_required = 'catalog.add_product'
     success_url = reverse_lazy('catalog:index')
 
+    def form_valid(self, form):
+        if form.is_valid:
+            self.object = form.save()
+            self.object.is_author = self.request.user
+            self.object.save()
 
-class ProductUpdateView(UpdateView):
+        return super().form_valid(form)
+
+
+class ProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
+    # permission_required = 'catalog.change_product'
     success_url = reverse_lazy('catalog:index')
+
+    def change_my_prod(self):
+        if self.request.user == self.object.is_author:
+            return ProductForm
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
@@ -42,13 +57,19 @@ class ProductListView(ListView):
     model = Product
     template_name = 'catalog/product_list.html'
 
+    # def get_queryset(self, *args, **kwargs):
+    #     queryset = super().get_queryset(*args, **kwargs)
+    #     queryset = queryset.filter(publication_sign=True)
+    #     return queryset
+
 
 class ProductDetailView(DetailView):
     model = Product
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     model = Product
+    permission_required = 'catalog.delete_product'
     success_url = reverse_lazy('catalog:index')
 
 
