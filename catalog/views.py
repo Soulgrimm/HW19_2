@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.forms import inlineformset_factory
+from django.http import Http404
 from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView, TemplateView
@@ -30,9 +31,13 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
     # permission_required = 'catalog.change_product'
     success_url = reverse_lazy('catalog:index')
 
-    def change_my_prod(self):
-        if self.request.user == self.object.is_author:
-            return ProductForm
+    def get_object(self, queryset=None):
+        self.object = super().get_object(queryset)
+        if self.request.user.is_staff:
+            return self.object
+        elif self.request.user != self.object.is_author:
+            return Http404
+        return self.object
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
