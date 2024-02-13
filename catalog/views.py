@@ -9,12 +9,19 @@ from catalog.forms import ProductForm, VersionForm
 from catalog.models import Product, Blog, Version
 from pytils.translit import slugify
 
+from catalog.services import get_cache_category
+
 
 class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
     # permission_required = 'catalog.add_product'
     success_url = reverse_lazy('catalog:index')
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['categories'] = get_cache_category()
+        return context_data
 
     def form_valid(self, form):
         if form.is_valid:
